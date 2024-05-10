@@ -8,9 +8,12 @@ app_ui = ui.page_sidebar(
         ui.input_slider("sample", "Sample Size", 0, 1, value=0.1, ticks=False),
         ui.input_checkbox("log", "Log Scale"),
     ),
-    ui.h3(ui.output_text("first_taxi_id")),
-    ui.card(ui.output_plot("tip_plot")),
+    ui.card(
+        ui.card_header(ui.output_text("first_taxi_id")),
+        ui.output_plot("tip_plot"),
+    ),
     ui.card(ui.output_plot("amount_histogram")),
+    class_="bslib-page-dashboard",
     title="Shiny",
 )
 
